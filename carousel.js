@@ -1,3 +1,78 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Sticky Navbar Effect
+    window.addEventListener("scroll", function () {
+        let navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    // Fade-in effect on scroll
+    const faders = document.querySelectorAll(".fade-in");
+    const appearOptions = {
+        threshold: 0.5,
+        rootMargin: "0px 0px -50px 0px",
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, appearOptions);
+
+    faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector("nav ul");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+        menuToggle.classList.toggle("active");
+        menuToggle.innerHTML = menuToggle.classList.contains("active") ? "×" : "☰";
+    });
+
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("show");
+            menuToggle.classList.remove("active");
+            menuToggle.innerHTML = "☰";
+        });
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeIn 0.5s ease forwards';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
 let slideIndex = 1;
 let slideInterval;
 let isPlaying = true;
