@@ -6,113 +6,8 @@
     <title>Noli Me Tangere - Works</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
-    <style>
-        /* Add these styles before the media query */
-        .menu-toggle {
-            display: none;  /* Hidden by default on desktop */
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        /* Mobile-friendly styles */
-        @media screen and (max-width: 768px) {
-            /* Navigation */
-            .menu-toggle {
-                display: block;  /* Show on mobile */
-                position: absolute;
-                right: 1rem;
-                top: 1rem;
-                z-index: 100;
-            }
-
-            nav ul {
-                display: none;
-                width: 100%;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                background: #fff;
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-
-            nav ul li {
-                margin: 1rem 0;
-            }
-
-            /* Content Layout */
-            .content-container {
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .text-content, 
-            .image-content {
-                width: 100%;
-            }
-
-            /* Bio Cards */
-            .bio-card {
-                width: 100%;
-                margin: 1rem 0;
-            }
-
-            .card-content {
-                flex-direction: column;
-            }
-
-            .card-content img {
-                width: 100%;
-                max-width: 300px;
-                margin: 0 auto 1rem;
-            }
-
-            /* Hero Section */
-            .hero-content {
-                padding: 2rem 1rem;
-            }
-
-            .hero-content h2 {
-                font-size: 2rem;
-            }
-
-            /* Context Section */
-            .context-block {
-                padding: 1rem;
-                margin-bottom: 2rem;
-            }
-
-            /* Text Readability */
-            .context-text p, 
-            .bio-text p {
-                font-size: 16px;
-                line-height: 1.6;
-            }
-
-            /* Images */
-            .image-content img {
-                max-width: 100%;
-                height: auto;
-            }
-
-            /* Ensure the header has relative positioning */
-            .main-nav {
-                position: relative;
-                padding: 1rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -171,9 +66,6 @@
                             <li>The clergy's misuse of power</li>
                             <li>The restriction of free thought</li>
                         </ul>
-                        <p>
-                            All of these factors fueled the growing call for reform and, eventually, revolution.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -189,46 +81,38 @@
     <!-- Plot Section -->
     <section class="featured section-padding" id="service">
         <div class="container">
-            <div class="row fade-in">
+            <div class="row">
                 <div class="col-12 text-center">
                     <h2 class="mb-5">Plot Summary</h2>
                 </div>
-                
-                <div class="content-container">
-                    <div class="bio-card">
-                        <div class="card-content">
-                            <img src="images/ibarra.png" alt="Crisostomo Ibarra">
-                            <div class="bio-text">
-                                <p>Noli Me Tangere follows the story of Crisostomo Ibarra, a young, idealistic Filipino who returns to the Philippines after studying in Europe. His dream is to uplift his countrymen by building a school, believing education is key to progress.</p>
-                            </div>
-                        </div>
+            </div>
+            
+            <div class="bio-cards-container">
+                <div class="bio-card">
+                    <img src="images/ibarra.png" alt="Crisostomo Ibarra">
+                    <div class="bio-text">
+                        <p>Noli Me Tangere follows the story of Crisostomo Ibarra, a young, idealistic Filipino who returns to the Philippines after studying in Europe. His dream is to uplift his countrymen by building a school, believing education is key to progress.</p>
                     </div>
+                </div>
 
-                    <div class="bio-card">
-                        <div class="card-content">
-                            <img src="images/padre d.jpg" alt="Padre Damaso">
-                            <div class="bio-text">
-                                <p>However, his plans face fierce opposition from powerful figures, especially Padre Damaso, a symbol of the abusive Spanish friars.</p>
-                            </div>
-                        </div>
+                <div class="bio-card">
+                    <img src="images/padre d.jpg" alt="Padre Damaso">
+                    <div class="bio-text">
+                        <p>However, his plans face fierce opposition from powerful figures, especially Padre Damaso, a symbol of the abusive Spanish friars.</p>
                     </div>
+                </div>
 
-                    <div class="bio-card">
-                        <div class="card-content">
-                            <img src="images/im1.jpg" alt="Key Events">
-                            <div class="bio-text">
-                                <p>Key events include Ibarra's discovery of his father's tragic fate, his relationship with Maria Clara, and the growing tension between the oppressed locals and their colonizers.</p>
-                            </div>
-                        </div>
+                <div class="bio-card">
+                    <img src="images/im1.jpg" alt="Key Events">
+                    <div class="bio-text">
+                        <p>Key events include Ibarra's discovery of his father's tragic fate, his relationship with Maria Clara, and the growing tension between the oppressed locals and their colonizers.</p>
                     </div>
+                </div>
 
-                    <div class="bio-card">
-                        <div class="card-content">
-                            <img src="images/noli1.jpg" alt="Story Climax">
-                            <div class="bio-text">
-                                <p>The novel climaxes with Ibarra falsely accused of rebellion, forcing him to flee. Maria Clara, heartbroken, enters a convent. The story ends with unresolved struggle, reflecting the grim reality of the Filipino plight during that era.</p>
-                            </div>
-                        </div>
+                <div class="bio-card">
+                    <img src="images/noli1.jpg" alt="Story Climax">
+                    <div class="bio-text">
+                        <p>The novel climaxes with Ibarra falsely accused of rebellion, forcing him to flee. Maria Clara, heartbroken, enters a convent. The story ends with unresolved struggle, reflecting the grim reality of the Filipino plight during that era.</p>
                     </div>
                 </div>
             </div>
@@ -238,40 +122,34 @@
     <!-- Character Analysis Section -->
     <section class="project section-padding" id="work">
         <div class="container">
-            <div class="row fade-in">
+            <div class="row">
                 <div class="col-12 text-center">
                     <h2 class="mb-5">Key Characters and Their Analysis</h2>
                 </div>
-                
-                <div class="content-container">
-                    <div class="bio-card">
-                        <div class="card-content">
-                            <img src="images/maria.jpg" alt="Maria Clara">
-                            <div class="bio-text">
-                                <h3>Maria Clara</h3>
-                                <p>Symbolizing purity and virtue, Maria Clara is torn between love for Ibarra and loyalty to her family. Her character reflects the limited roles women played during the colonial period and the sacrifices they made due to societal expectations.</p>
-                            </div>
-                        </div>
+            </div>
+            
+            <div class="bio-cards-container">
+                <div class="bio-card">
+                    <img src="images/maria.jpg" alt="Maria Clara">
+                    <div class="bio-text">
+                        <h3>Maria Clara</h3>
+                        <p>Symbolizing purity and virtue, Maria Clara is torn between love for Ibarra and loyalty to her family. Her character reflects the limited roles women played during the colonial period and the sacrifices they made due to societal expectations.</p>
                     </div>
+                </div>
 
-                    <div class="bio-card">
-                        <div class="card-content">
-                            <img src="images/padre d.jpg" alt="Padre Damaso">
-                            <div class="bio-text">
-                                <h3>Padre Damaso</h3>
-                                <p>As the main antagonist, Padre Damaso personifies the corruption and hypocrisy of Spanish friars. His meddling in Ibarra's life and his secret past with Maria Clara's mother emphasize the moral decay hidden beneath the clergy's righteous facade.</p>
-                            </div>
-                        </div>
+                <div class="bio-card">
+                    <img src="images/padre d.jpg" alt="Padre Damaso">
+                    <div class="bio-text">
+                        <h3>Padre Damaso</h3>
+                        <p>As the main antagonist, Padre Damaso personifies the corruption and hypocrisy of Spanish friars. His meddling in Ibarra's life and his secret past with Maria Clara's mother emphasize the moral decay hidden beneath the clergy's righteous facade.</p>
                     </div>
+                </div>
 
-                    <div class="bio-card">
-                        <div class="card-content">
-                            <img src="images/sisa.jpg" alt="Sisa">
-                            <div class="bio-text">
-                                <h3>Sisa</h3>
-                                <p>A mother driven to madness by the loss of her children, Basilio and Crispin, who were wrongfully accused of theft by the corrupt friars. She wanders aimlessly, calling out for her sons, embodying the pain and helplessness of the oppressed Filipino masses.</p>
-                            </div>
-                        </div>
+                <div class="bio-card">
+                    <img src="images/sisa.jpg" alt="Sisa">
+                    <div class="bio-text">
+                        <h3>Sisa</h3>
+                        <p>A mother driven to madness by the loss of her children, Basilio and Crispin, who were wrongfully accused of theft by the corrupt friars. She wanders aimlessly, calling out for her sons, embodying the pain and helplessness of the oppressed Filipino masses.</p>
                     </div>
                 </div>
             </div>

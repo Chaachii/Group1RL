@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - J. Rizal</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="navbar" class="main-nav">
+        <h1 class="logo">J. RIZAL</h1>
+        <nav>
+            <button class="menu-toggle">☰</button>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="works.html" class="nav-link">Works</a></li>
+                <li><a href="analysis.html" class="nav-link">Analysis</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="members.html" class="nav-link">Members</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>GALLERY</h2>
+            <p>A visual journey through Rizal's life and works</p>
+            <a href="#gallery" class="btn dark">Explore</a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="carousel-container">
+        <button class="carousel-button prev" onclick="moveSlide(-1)">❮</button>
+        <button class="carousel-button next" onclick="moveSlide(1)">❯</button>
+        <button class="carousel-button play-pause" onclick="toggleSlideshow()">❚❚</button>
+        
+        <div class="carousel-slides">
+            <div class="slide fade">
+                <img src="gallery/rizalhouse.jpg" alt="Rizal House">
+                <div class="caption">
+                    <h3>Birthplace and Family</h3>
+                    <p>Born in Calamba, Laguna as the seventh child of Don Francisco Mercado II and Teodora Alonso Realonda</p>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="gallery/baptism.jpg" alt="Baptism">
+                <div class="caption">
+                    <h3>Baptism</h3>
+                    <p>Baptized in Calamba Catholic Church by Rev. Rufino Collantes. The original record was lost in a church fire.</p>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="gallery/edu1.jpg" alt="Early Education">
+                <div class="caption">
+                    <h3>Early Education</h3>
+                    <p>At age 3, learned the alphabet from his mother Teodora, who became his first teacher</p>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="gallery/edu2.jpg" alt="Ateneo">
+                <div class="caption">
+                    <h3>Ateneo Municipal de Manila</h3>
+                    <p>Began his secondary education here at age 11</p>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="gallery/edu3.jpg" alt="UST">
+                <div class="caption">
+                    <h3>University of Santo Tomas</h3>
+                    <p>Pursued his medical studies before heading to Europe</p>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="gallery/edu4.jpg" alt="Madrid">
+                <div class="caption">
+                    <h3>Universidad Central de Madrid</h3>
+                    <p>Studied Philosophy, Letters, and Medicine</p>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="gallery/noli.jpg" alt="Noli Me Tangere">
+                <div class="caption">
+                    <h3>Noli Me Tangere (1887)</h3>
+                    <p>His first novel, published during the Spanish colonial period</p>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="gallery/elfili.jpg" alt="El Filibusterismo">
+                <div class="caption">
+                    <h3>El Filibusterismo</h3>
+                    <p>His second novel, serving as a sequel to Noli Me Tangere</p>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="gallery/execution.png" alt="Execution">
+                <div class="caption">
+                    <h3>Martyrdom</h3>
+                    <p>Executed by firing squad on December 30, 1896 in Manila</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
+        
+        <div class="progress-bar"></div>
+    </section>
+    <script src="carousel.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
