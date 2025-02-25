@@ -11,11 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
     <style>
+        /* Add these styles before the media query */
+        .menu-toggle {
+            display: none;  /* Hidden by default on desktop */
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
         /* Mobile-friendly styles */
         @media screen and (max-width: 768px) {
             /* Navigation */
             .menu-toggle {
-                display: block;
+                display: block;  /* Show on mobile */
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                z-index: 100;
             }
 
             nav ul {
@@ -90,6 +104,12 @@
             .image-content img {
                 max-width: 100%;
                 height: auto;
+            }
+
+            /* Ensure the header has relative positioning */
+            .main-nav {
+                position: relative;
+                padding: 1rem;
             }
         }
     </style>
