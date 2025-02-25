@@ -11,6 +11,48 @@
     rel="stylesheet"
   />
   <script defer src="script.js"></script>
+  <style>
+    /* Mobile-friendly styles */
+    @media screen and (max-width: 768px) {
+      .content-container {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .text-content, .image-content {
+        width: 100%;
+      }
+
+      .image-content img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .hero-content {
+        padding: 2rem 1rem;
+      }
+
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+
+      .context-block {
+        padding: 1rem;
+      }
+
+      /* Improve readability on mobile */
+      .context-text p, 
+      .context-text li {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      /* Better spacing for mobile */
+      .context-block {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
