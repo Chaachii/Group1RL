@@ -10,6 +10,89 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
+    <style>
+        /* Mobile-friendly styles */
+        @media screen and (max-width: 768px) {
+            /* Navigation */
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #fff;
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 1rem 0;
+            }
+
+            /* Content Layout */
+            .content-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .text-content, 
+            .image-content {
+                width: 100%;
+            }
+
+            /* Bio Cards */
+            .bio-card {
+                width: 100%;
+                margin: 1rem 0;
+            }
+
+            .card-content {
+                flex-direction: column;
+            }
+
+            .card-content img {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto 1rem;
+            }
+
+            /* Hero Section */
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            /* Context Section */
+            .context-block {
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            /* Text Readability */
+            .context-text p, 
+            .bio-text p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            /* Images */
+            .image-content img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
