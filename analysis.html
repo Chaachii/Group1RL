@@ -12,44 +12,105 @@
   />
   <script defer src="script.js"></script>
   <style>
+    /* Base styles */
+    .content-container {
+      padding: 2rem;
+      display: flex;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .text-content {
+      flex: 2;
+    }
+
+    .image-content {
+      flex: 1;
+    }
+
+    /* Simple fade-in animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.8s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     /* Mobile-friendly styles */
     @media screen and (max-width: 768px) {
       .content-container {
         flex-direction: column;
         padding: 1rem;
+        gap: 1rem;
       }
 
-      .text-content, .image-content {
+      .text-content, 
+      .image-content {
         width: 100%;
       }
 
       .image-content img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
+        margin-bottom: 1rem;
       }
 
       .hero-content {
         padding: 2rem 1rem;
+        text-align: center;
       }
 
       .hero-content h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
       }
 
       .context-block {
         padding: 1rem;
+        margin-bottom: 1.5rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       }
 
-      /* Improve readability on mobile */
       .context-text p, 
       .context-text li {
         font-size: 16px;
         line-height: 1.6;
+        margin-bottom: 1rem;
       }
 
-      /* Better spacing for mobile */
-      .context-block {
-        margin-bottom: 2rem;
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Improve navigation on mobile */
+      .main-nav ul {
+        background: #fff;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .main-nav ul li {
+        margin: 0.5rem 0;
+      }
+
+      /* Better spacing for quotes */
+      .context-block ul li {
+        margin-bottom: 1.5rem;
+      }
+
+      /* Improve button visibility */
+      .btn {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        margin: 1rem 0;
+        font-size: 1rem;
       }
     }
   </style>
