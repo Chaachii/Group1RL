@@ -30,23 +30,49 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Mobile Menu Toggle
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector("nav ul");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("show");
-        menuToggle.classList.toggle("active");
-        menuToggle.innerHTML = menuToggle.classList.contains("active") ? "×" : "☰";
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Menu toggle functionality
+    menuToggle.addEventListener('click', function() {
+        nav.querySelector('ul').classList.toggle('show');
+        this.classList.toggle('close');
+        this.innerHTML = nav.querySelector('ul').classList.contains('show') ? '×' : '≡';
     });
 
     // Close menu when clicking a link
     navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("show");
-            menuToggle.classList.remove("active");
-            menuToggle.innerHTML = "☰";
+        link.addEventListener('click', () => {
+            nav.querySelector('ul').classList.remove('show');
+            menuToggle.classList.remove('close');
+            menuToggle.innerHTML = '≡';
         });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+            nav.querySelector('ul').classList.remove('show');
+            menuToggle.classList.remove('close');
+            menuToggle.innerHTML = '≡';
+        }
+    });
+
+    // Scroll behavior for header
+    const header = document.querySelector('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        lastScroll = currentScroll;
     });
 
     const filterButtons = document.querySelectorAll('.filter-btn');
